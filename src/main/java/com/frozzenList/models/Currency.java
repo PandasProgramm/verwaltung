@@ -1,9 +1,14 @@
 package com.frozzenList.models;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Table(name = "currency")
 @Entity
+@Getter
+@Setter
 public class Currency {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,22 +20,6 @@ public class Currency {
 
     @Column(name = "currency_unit", nullable = false, length = 50)
     private String currencyUnit;
-
-    public String getCurrencyUnit() {
-        return currencyUnit;
-    }
-
-    public void setCurrencyUnit(String currencyUnit) {
-        this.currencyUnit = currencyUnit;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
 
     public Long getId() {
         return id;
