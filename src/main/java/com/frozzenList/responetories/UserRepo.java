@@ -1,5 +1,6 @@
 package com.frozzenList.responetories;
 
+import com.frozzenList.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
